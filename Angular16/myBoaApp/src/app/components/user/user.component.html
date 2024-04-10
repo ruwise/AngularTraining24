@@ -1,1 +1,13 @@
-<p>user works!</p>
+<div><p>User Magmnt with Angular Service</p></div>
+
+<button type="submit" class="btn-primary" (click)="getUserDetails()">
+  User Details
+</button>
+
+<div>
+  <ol>
+    <li *ngFor="let user of getData">
+      {{ user.first_name }}<b>|||</b>{{ user.email }}
+    </li>
+  </ol>
+</div>

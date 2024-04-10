@@ -9,7 +9,7 @@ export class UserService {
 
   // Impl Cors 
 
-  headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin', '*');
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
   httpClient: HttpClient;
 
   constructor(httpClient: HttpClient) {
