@@ -5,9 +5,10 @@
 /Angular16/myBoaApp/tmp
 /Angular16/myBoaApp/out-tsc
 /Angular16/myBoaApp/bazel-out
-
+/Angular16/myBoaApp/.angular
 # Node
 /Angular16/myBoaApp/node_modules
+/JSON-SERVER-API/node_modules
 npm-debug.log
 yarn-error.log
 

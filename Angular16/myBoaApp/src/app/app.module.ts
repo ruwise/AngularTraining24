@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { AgePipePipe } from './pipes/age-pipe.pipe';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
-    AgePipePipe
+    AgePipePipe,
+    UserComponent
   ],
   imports: [
     BrowserModule,
