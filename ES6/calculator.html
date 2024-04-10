@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class BasicCal {
+            
+            #result;
+
+            constructor(a, b){
+                console.log("Creating a basic calculator!")
+                this.x = a;
+                this.y = b;
+            }
+
+            add(){
+                this.#result = this.x + this.y;
+                return this.#result;
+            }
+            
+            sub(){
+                this.#result = this.x - this.y;
+                return this.#result;
+            }
+
+            mul(){
+                return this.x * this.y;
+            }
+
+            div(){
+                return this.x / this.y;
+            }
+        }
+
+        class SciCal extends BasicCal {
+
+            constructor(a, b = 0){
+                super(a, b);
+                this.x = a;
+                console.log("creating scientific calculator!")
+            }
+
+            #sincalculation(){
+                return Math.sin(this.x * Math.PI/180);
+            }
+
+            getSinValue(){
+                return this.#sincalculation();
+            }
+
+            static getCos(a){
+                return Math.cos(a * Math.PI/180);
+            }
+
+        }
+
+        BasicCal.prototype.squareRoot = function() {
+            return Math.sqrt(this.x);
+        }
+
+
+        let sciCal1 = new SciCal(144, 2);
+        console.log("Add: "+sciCal1.add());
+        console.log("Sub: "+sciCal1.sub());
+        console.log("Mul: "+sciCal1.mul());
+        console.log("Div: "+sciCal1.div());
+        console.log("Sqrt: "+sciCal1.squareRoot());
+
+        let sciCal2 = new SciCal(90);
+        console.log("Sin: "+sciCal2.getSinValue())
+        console.log("Cos: "+SciCal.getCos(0))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

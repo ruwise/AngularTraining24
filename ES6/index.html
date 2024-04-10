@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        class Person{
+
+            #test;
+
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                this.#test = 100;
+                console.log("person is init-->")
+                console.log("Name of person: "+this.name+" Age: "+this.age)
+            }
+
+        #stuffPrivateMehtod(){
+            console.log("Inside private method")
+            return this.#test;
+        }
+        getConcatMethod(){
+            console.log("private value: "+this.test);
+            return this.concat();
+        }
+
+        concat(){
+            console.log("Public method called!")
+            return this.age+", "+this.age;
+        }
+        static myStatic(){
+            console.log("In static method");
+        }
+    }
+
+    class Student extends Person {
+
+        myTestStudent() {
+        return "From Student Class";
+        }
+    }
+    Person.prototype.test1 = 200;
+    Person.prototype.sayHello = function() {
+        console.log("Extension of person class");
+        return this.test1;
+    };
+
+    let p = new Student("Ruwise", 35);
+    p.getConcatMethod();
+    p.sayHello();
+    Person.myStatic();
+    console.log(p.myTestStudent());
+
+    
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

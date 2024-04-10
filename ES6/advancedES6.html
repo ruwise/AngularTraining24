@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // function testValue(x){
+
+        //     let y;
+        //     if(x===1){
+        //         let d = 5;
+        //         y = 10
+        //         console.log("d: "+d);
+        //         console.log("y: "+y);
+        //     }
+        //     console.log("d: "+d);
+        //     console.log("y: "+y);
+        // }
+        // testValue(1);
+        // console.log("y: "+y)
+
+        // var multiply = function(x, y) {
+        //     return x * y;
+        // }
+        // console.log(multiply(10, 5));
+        // console.timeEnd("ES5");
+
+        // var multiply1 = (x, y) => x * y;
+        
+        // console.log(multiply1(10, 5));
+        // console.timeEnd("ES6");
+        
+        // var add = (...x) => {
+        //     var sum = 0
+        //     x.forEach(a => {
+        //     sum = sum + a;
+        //     });
+        // return sum;
+        // }
+
+        // console.log(add(1, 2, 3, 4, 5));
+        
+
+        class BasicCal {
+            
+            // #result;
+
+            // constructor(a, b){
+            //     console.log("Creating a basic calculator!")
+            //     this.x = a;
+            //     this.y = b;
+            // }
+
+            constructor(){
+                console.log("Creating calculator");
+            }
+
+            add = (...numbers) => {
+                let sum = 0;
+                numbers.forEach(a =>  sum = sum + a );
+                return sum;
+            }
+            
+            sub = (a, b) => a - b;
+
+            mul = (...numbers) => {
+                let result = 0;
+                numbers.forEach(a => result = result + a);
+                return result;
+            }
+
+            div = (a, b) => a / b;
+        }
+
+        let cal = new BasicCal();
+        console.log("Add: "+cal.add(10, 10));
+        console.log("Add: "+cal.add(1 , 2, 3, 4, 5, 6, 7));
+        console.log("Sub: "+cal.sub(99, 89));
+        console.log("Mul: "+cal.mul(10, 10));
+        console.log("Mul: "+cal.mul(10, 10, 2, 5));
+        console.log("Div: "+cal.div(189, 3));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
