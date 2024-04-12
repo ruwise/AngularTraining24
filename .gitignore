@@ -1,18 +1,21 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Compiled output
+
 /Angular16/myBoaApp/dist
 /Angular16/myBoaApp/tmp
 /Angular16/myBoaApp/out-tsc
 /Angular16/myBoaApp/bazel-out
 /Angular16/myBoaApp/.angular
-# Node
+/Angular16/myBoaApp/.vscode
+/Angular16/myBoaApp/.editorconfig
+
 /Angular16/myBoaApp/node_modules
-/JSON-SERVER-API/node_modules
+/JSON-SERVER-APInode_modules
+
 npm-debug.log
 yarn-error.log
 
-# Miscellaneous
+
 /Angular16/myBoaApp/.angular/cache
 
 /Angular16/myBoaApp/connect.lock

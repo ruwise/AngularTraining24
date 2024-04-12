@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {ChartModule} from 'primeng/chart';
 import { AnalyticsRoutingModule } from './analytics-routing.module';
 import { CustomerAnalyticsComponent } from './customer-analytics/customer-analytics.component';
 
@@ -11,7 +12,8 @@ import { CustomerAnalyticsComponent } from './customer-analytics/customer-analyt
   ],
   imports: [
     CommonModule,
-    AnalyticsRoutingModule
+    AnalyticsRoutingModule,
+    ChartModule
   ]
 })
 export class AnalyticsModule { }
