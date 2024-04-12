@@ -1,64 +1,44 @@
 {
   "users": [
     {
-      "id": "1",
-      "first_name": "Robert",
-      "last_name": "Schwartz",
-      "email": "robert@gmail.com"
-    },
-    {
-      "id": "3",
-      "first_name": "Anna",
-      "last_name": "Smith",
-      "email": "annasmith23@gmail.com"
-    },
-    {
-      "id": "4",
-      "first_name": "Robert",
-      "last_name": "Brown",
-      "email": "bobbrown432@yahoo.com"
-    },
-    {
-      "id": "5",
-      "first_name": "Roger",
-      "last_name": "Bacon",
-      "email": "rogerbacon12@yahoo.com"
-    },
-    {
-      "id": "101",
-      "first_name": "amit",
-      "last_name": "Schwartz",
-      "email": "amit@gmail.com"
-    },
-    {
-      "first_name": "Rojus",
+      "id": "1001",
+      "first_name": "Ruwise",
       "last_name": "Esho",
-      "email": "ruwise@abcd.com",
-      "id": "102"
+      "email": "ruwise@yahoo.com",
+      "username": "ruwise",
+      "password": "ruwise"
     },
     {
-      "id": "105",
+      "id": "1002",
       "first_name": "John",
-      "last_name": "Daniel",
-      "email": "john@yahoo.com"
+      "last_name": "Doe",
+      "email": "john@abcd.com",
+      "username": "john",
+      "password": "john"
     },
     {
-      "id": "106",
-      "first_name": "Sidharth",
-      "last_name": "Rajan",
-      "email": "sid@yahoo.com"
+      "id": "1003",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "jane@abcd.com",
+      "username": "jane",
+      "password": "jane"
     },
     {
-      "id": "107",
-      "first_name": "amit",
-      "last_name": "fgh",
-      "email": "amit@yahoo.com"
+      "id": "1004",
+      "first_name": "Alice",
+      "last_name": "Tayler",
+      "email": "alice@yahoo.com",
+      "username": "alice",
+      "password": "alice"
     },
     {
-      "id": "108",
-      "first_name": "John",
-      "last_name": "asd",
-      "email": "asd"
+      "id": "1005",
+      "first_name": "Bob",
+      "last_name": "Miller",
+      "email": "bob@bob.com",
+      "username": "bob",
+      "password": "bob"
     }
   ]
 }

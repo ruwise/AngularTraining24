@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserComponent {
   userList: User[] | undefined;
-  defaultUser: User = new User("1000", "", "", "");
+  defaultUser: User = new User("1000", "", "", "", "", "");
   buttonName = "Add User";
   isEdit: boolean = false;
   id: number = 1000;
@@ -28,7 +28,7 @@ export class UserComponent {
       this.userList.sort((a, b) => Number(a.id) - Number(b.id));
     })
   }
-  showAllUsers(){
+  showAllUsers() {
     this.getUserDetails();
     this.showUsers = true;
   }
@@ -43,11 +43,12 @@ export class UserComponent {
     if (this.isEdit) {
       this.updateUser();
     } else {
-      if(this.userList != undefined && this.userList.length > 0){
-        this.id = Number(this.userList[this.userList.length-1].id);
+      if (this.userList != undefined && this.userList.length > 0) {
+        this.id = Number(this.userList[this.userList.length - 1].id);
       }
       this.id += 1;
-      let user = new User(this.id.toString(), this.defaultUser.first_name, this.defaultUser.last_name, this.defaultUser.email);
+      let user = new User(this.id.toString(), this.defaultUser.first_name, this.defaultUser.last_name, this.defaultUser.email,
+        this.defaultUser.username, this.defaultUser.password);
       this._httpService.createNewUSer(user).subscribe((res: User) => {
         console.log("User created!");
         console.log(JSON.stringify(res));
@@ -58,7 +59,7 @@ export class UserComponent {
   }
 
   // updae the selected user
-  updateUser(){
+  updateUser() {
     this._httpService.updateUser(this.defaultUser).subscribe((res: User) => {
       console.log("User updated!");
       console.log(JSON.stringify(res));
@@ -68,12 +69,12 @@ export class UserComponent {
 
   // edit user details based on id
   editUser(user: User) {
-      this.defaultUser.id = user.id;
-      this.defaultUser.first_name = user.first_name;
-      this.defaultUser.last_name = user.last_name;
-      this.defaultUser.email = user.email;
-      this.isEdit = true;
-      this.buttonName = "Update User";
+    this.defaultUser.id = user.id;
+    this.defaultUser.first_name = user.first_name;
+    this.defaultUser.last_name = user.last_name;
+    this.defaultUser.email = user.email;
+    this.isEdit = true;
+    this.buttonName = "Update User";
 
   }
 
@@ -97,6 +98,8 @@ export class UserComponent {
     this.defaultUser.first_name = "";
     this.defaultUser.last_name = "";
     this.defaultUser.email = "";
+    this.defaultUser.username = "";
+    this.defaultUser.password = ""
     this.buttonName = "Add User";
     this.isEdit = false;
   }
