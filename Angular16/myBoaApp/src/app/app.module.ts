@@ -17,6 +17,7 @@ import { NormalorderComponent } from './components/normalorder/normalorder.compo
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HighLightDirective } from './directives/high-light.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     NormalorderComponent,
     PageNotFoundComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
