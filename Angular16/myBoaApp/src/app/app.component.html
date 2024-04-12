@@ -56,14 +56,23 @@
     </svg>
 
   </div>
-  <div>{{ message }}</div>
-  <button (click)="onClickMe()">Status</button>
-  <p>{{ clickMessage }}</p>
-  <div>
-    <app-customer></app-customer>
+</div>
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <div>{{ message }}</div>
+      <input type="button" class="btn btn-secondary" (click)="onClickMe()" value="Status" />
+      <p>{{ clickMessage }}</p>
+    </div>
   </div>
-  <div>
-    <app-user></app-user>
+  <div class="row">
+    <div class="col">
+      <app-customer></app-customer>
+    </div>
+    <div class="col">
+      <app-user></app-user>
+    </div>
   </div>
 </div>
 
