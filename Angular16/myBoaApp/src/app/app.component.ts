@@ -7,12 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myBoaApp';
-  message = "Angular application running"
   today: Date = new Date();
-  clickMessage: string = 'Training Status';
 
-  onClickMe() {
-
-    this.clickMessage = 'Training is on';
-  }
 }

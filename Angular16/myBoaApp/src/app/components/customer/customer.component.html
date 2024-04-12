@@ -1,36 +1,38 @@
-<div>
-    <h3>Customer Form</h3>
-</div>
-<form ngForm>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required="true" />
+<div class="container">
+    <div>
+        <h3>Customer Form</h3>
     </div>
+    <form ngForm>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required="true" />
+        </div>
 
-    <div class="form-group">
-        <label for="age">Age</label>
-        <input type="number" class="form-control" id="age" [(ngModel)]="model.age" name="age" required="true" />
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" [(ngModel)]="model.age" name="age" required="true" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="createCustomer()">
+            {{buttonName}}
+        </button>
+    </form>
+
+    <div *ngIf="custArray.length > 0">
+        <h1>Customer list</h1>
+        <table class="table">
+            <tr *ngIf="custArray.length > 0">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor='let cust of custArray; index as i;'>
+                <td>{{cust.name | lowercase}}</td>
+                <td>{{cust.age | agePipe: 10 }}</td>
+                <td><input type="button" class="btn btn-secondary" (click)="editCustomer(i)" value="Edit"></td>
+                <td><input type="button" class="btn btn-danger" (click)="deleteCustomer(i)" value="Delete"></td>
+            </tr>
+        </table>
     </div>
-
-    <button type="submit" class="btn btn-primary" (click)="createCustomer()">
-        {{buttonName}}
-    </button>
-</form>
-
-<div *ngIf="custArray.length > 0">
-    <h1>Customer list</h1>
-    <table class="table">
-        <tr  *ngIf="custArray.length > 0">
-            <th>Name</th>
-            <th>Age</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        <tr *ngFor='let cust of custArray; index as i;'>
-            <td>{{cust.name | lowercase}}</td>
-            <td>{{cust.age | agePipe: 10 }}</td>
-            <td><input type="button" class="btn btn-secondary" (click)="editCustomer(i)" value="Edit"></td>
-            <td><input type="button" class="btn btn-danger" (click)="deleteCustomer(i)" value="Delete"></td>
-        </tr>
-    </table>
 </div>
