@@ -9,6 +9,7 @@
 /Angular16/myBoaApp/.vscode
 /Angular16/myBoaApp/.editorconfig
 
+
 /Angular16/myBoaApp/node_modules
 /JSON-SERVER-APInode_modules
 
@@ -22,3 +23,19 @@ yarn-error.log
 /Angular16/myBoaApp/coverage
 /Angular16/myBoaApp/libpeerconnection.log
 /Angular16/myBoaApp/typings
+
+
+/Angular16/myAngularTailwind/dist
+/Angular16/myAngularTailwind/tmp
+/Angular16/myAngularTailwind/out-tsc
+/Angular16/myAngularTailwind/bazel-out
+/Angular16/myAngularTailwind/.angular
+/Angular16/myAngularTailwind/.vscode
+/Angular16/myAngularTailwind/.editorconfig
+
+/Angular16/myAngularTailwind/node_modules
+/Angular16/myAngularTailwind/.angular/cache
+/Angular16/myAngularTailwind/connect.lock
+/Angular16/myAngularTailwind/coverage
+/Angular16/myAngularTailwind/libpeerconnection.log
+/Angular16/myAngularTailwind/typings
