@@ -15,8 +15,8 @@ export class CustomerComponent {
   upIndex: number = 0;
   public createCustomer(): void {
     if (this.isEdit) {
-        this.custArray[this.upIndex].name = this.model.name;
-        this.custArray[this.upIndex].age = this.model.age;
+      this.custArray[this.upIndex].name = this.model.name;
+      this.custArray[this.upIndex].age = this.model.age;
     } else {
       console.log("Create customer even was fired!");
       this.custArray.push(new Customer(this.model.name, this.model.age));
